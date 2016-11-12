@@ -1,0 +1,21 @@
+html {
+  /* background-color: black; */
+  background-color: hsl(0,0%,95%);
+}
+
+body {
+  margin: 1% 10%;
+}
+
+img {
+  margin: 1rem;
+  vertical-align: middle;
+  max-width: calc((100% - 7rem) / 2);
+}
+
+@media (min-width: 1024px) {
+  img {
+    max-width: calc((100% - 7rem) / 3);
+  }
+}
+

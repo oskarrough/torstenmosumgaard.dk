@@ -1,0 +1,5 @@
+{{outlet}}
+
+{{#each images as |img|}}
+  <img class="lazyload" data-src="{{cloudinary-url img.public_id}}" alt="">
+{{/each}}
