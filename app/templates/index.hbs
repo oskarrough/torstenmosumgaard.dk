@@ -1,11 +1,12 @@
 <!-- <h1>Torsten Mosumgaard Keramik</h1> -->
 <!-- <p>You can contact me at <a href="mailto:torsten@mosumgaard.dk">torsten@mosumgaard.dk</a> or <a href="tel:004597951950">+45 97 95 19 50</a>.</p> -->
 
-{{#image-gallery as |selectedImage open close|}}
-  <div class="Modal {{if selectedImage 'is-open'}}"
-    onclick={{action close}}>
+{{#image-gallery images=images as |images selectedImage open close next previous|}}
+  <div class="Modal {{if selectedImage 'is-open'}}">
     {{#if selectedImage}}
-      {{x-img img=selectedImage}}
+      <button onclick={{action previous}}>Previous</button>
+      {{x-img img=selectedImage onClick=(action close)}}
+      <button onclick={{action next}}>Next</button>
     {{/if}}
   </div>
 
@@ -13,8 +14,5 @@
       {{x-img img=img onClick=(action open img)}}
   {{/each}}
 {{/image-gallery}}
-
-    <!-- {{#link-to "photo" img}} -->
-    <!-- {{/link-to}} -->
 
 {{outlet}}
