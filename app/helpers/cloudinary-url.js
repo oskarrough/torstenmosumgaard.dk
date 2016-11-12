@@ -1,9 +1,16 @@
 import Ember from 'ember';
 
-export function cloudinaryUrl(params/*, hash*/) {
-  // console.log(params);
-  const id = params[0];
-  const transformations = `q_auto,f_auto,fl_awebp,w_500`;
+export function cloudinaryUrl([id, ...rest]) {
+  // console.log(id);
+  // console.log(rest);
+  let width = 500;
+  let quality = 'auto';
+
+  if (rest[0]) {
+    width = rest[0];
+  }
+
+  const transformations = `q_${quality},f_auto,fl_awebp,w_${width}`;
   const url = `https://res.cloudinary.com/torstenmosumgaard/image/upload/${transformations}/v1478906065/${id}`;
   return [url];
 }

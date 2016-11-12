@@ -36,6 +36,7 @@ figure .Ratio {
 
 figure img {
   max-width: 100%;
+  width: 100%;
   height: auto;
   vertical-align: middle;
   position: absolute;
@@ -64,13 +65,13 @@ figure img.lazyloaded {
   }
 
   section > * {
-    flex-basis: 14%;
+    flex-basis: 25%;
   }
 }
 
 @media (min-width: 1440px) {
   section > * {
-    /* flex-basis: 33%; */
+    flex-basis: 16%;
   }
 }
 

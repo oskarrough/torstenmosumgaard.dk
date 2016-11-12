@@ -7,7 +7,11 @@ export default Component.extend({
 
   ratioStyles: computed('img.{width,height}', {
     get() {
-      const {width, height} = get(this, 'img');
+      const img = get(this, 'img');
+      if (!img) {
+        return '';
+      }
+      const {width, height} = img;
       const ratio = (height / width) * 100;
       return Ember.String.htmlSafe(`padding-bottom: ${ratio}%`);
     }
