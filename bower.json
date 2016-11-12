@@ -1,7 +1,10 @@
 {
   "name": "tm",
   "dependencies": {
-    "ember": "~2.9.0",
+    "ember": "2.10.0-beta.3",
     "ember-cli-shims": "0.1.3"
+  },
+  "resolutions": {
+    "ember": "2.10.0-beta.3"
   }
 }
