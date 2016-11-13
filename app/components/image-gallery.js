@@ -3,36 +3,63 @@ import Ember from 'ember';
 const {Component, get, set} = Ember;
 
 export default Component.extend({
-  didReceiveAttrs() {
+  // images
+  // currentImage
+  // currentImageId
+
+  didInsertElement() {
     this._super(...arguments);
     // If there is an id, open the modal.
-    const id = get(this, 'selectedImageId');
-    if (id) {
-      const img = get(this, 'images').filterBy('public_id', id)[0];
-      this.setImage(img);
+    const id = get(this, 'currentImageId');
+    const images = get(this, 'images');
+    if (id && images) {
+      const img = images.filterBy('public_id', id)[0];
+      this.send('open', img);
     }
   },
 
-  setImage(img) {
-    set(this, 'selectedImage', img);
-    set(this, 'selectedImageId', img.public_id);
+  goTo(steps = 1) {
+    const images = get(this, 'images');
+    const currentImage = get(this, 'currentImage');
+    const currentIndex = images.indexOf(currentImage);
+    const image = images.objectAt(currentIndex + steps);
+    this.send('open', image);
   },
 
   actions: {
     open(img) {
-      this.setImage(img);
+      this.setProperties({
+        currentImageId: img.public_id,
+        currentImage: img
+      });
     },
     close() {
-      set(this, 'selectedImage', '');
-      set(this, 'selectedImageId', '');
+      set(this, 'currentImage', '');
+      set(this, 'currentImageId', '');
     },
     next() {
-      const index = get(this, 'images').indexOf(get(this, 'selectedImage'));
-      this.setImage(get(this, 'images').objectAt(index + 1));
+      this.goTo(1);
     },
     previous() {
-      const index = get(this, 'images').indexOf(get(this, 'selectedImage'));
-      this.setImage(get(this, 'images').objectAt(index - 1));
+      this.goTo(-1);
     }
   }
 });
+
+// keydownMap: {
+//   // 8:  'startBackspacing', // backspace
+//   27: 'closeModal', // escape
+//   38: 'previous', // up key
+//   40: 'next', // down key
+// },
+
+// handleKeydown: Ember.on('keyDown', function(event) {
+//   const map = this.get('keydownMap');
+//   const code = event.keyCode;
+//   const method = map[code];
+//   console.log(code);
+//   if (method) {
+//     // return this[method](event);
+//     return this.send(method);
+//   }
+// }),

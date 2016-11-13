@@ -5,14 +5,13 @@
 <br>
 <br>
 
-{{#image-gallery images=images selectedImageId=image as |images selectedImage open close next previous|}}
-  <div class="Modal {{if selectedImage 'is-open'}}">
-    {{#if selectedImage}}
-      <button onclick={{action previous}}>Prev</button>
-      {{x-img img=selectedImage onClick=(action close)}}
-      <button onclick={{action next}}>Next</button>
-    {{/if}}
-  </div>
+{{#image-gallery images=images currentImageId=image as |images currentImage open close next previous|}}
+  {{#modal-dialog modalImage=currentImage as |modalImage|}}
+    <button onclick={{action previous}} title="See previous photo">&larr;</button>
+    {{x-img img=modalImage onClick=(action close)}}
+    <button onclick={{action next}} title="See next photo">&rarr;</button>
+  {{/modal-dialog}}
+
   <section>
     {{#each images as |img|}}
       {{x-img img=img onClick=(action open img)}}

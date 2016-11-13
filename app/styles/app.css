@@ -138,18 +138,9 @@ figure img.lazyloaded {
   display: none;
 }
 
-.Modal img.lazyload + .Ratio::before,
-.Modal img.lazyloading + .Ratio::before {
-  content: "";
+.Modal img.lazyload + .Loader,
+.Modal img.lazyloading + .Loader {
   display: block;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  background-color: hsl(0, 0%, 100%);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%, -50%, 0);
 }
 
 .Modal button {
@@ -177,4 +168,14 @@ figure img.lazyloaded {
 
 .Modal button:last-child {
   cursor: e-resize;
+}
+
+.Loader,.Loader i{position:absolute}.Loader{width:100px;height:40px;top:50%;left:50%;margin:-20px -50px}.Loader i{width:20px;height:20px;background:hsl(0, 0%, 10%);border-radius:50%}.Loader i:nth-child(1){-webkit-animation:animate 2s linear infinite;animation:animate 2s linear infinite}.Loader i:nth-child(2){-webkit-animation:animate 2s linear infinite -.4s;animation:animate 2s linear infinite -.4s}.Loader i:nth-child(3){-webkit-animation:animate 2s linear infinite -.8s;animation:animate 2s linear infinite -.8s}.Loader i:nth-child(4){-webkit-animation:animate 2s linear infinite -1.2s;animation:animate 2s linear infinite -1.2s}.Loader i:nth-child(5){-webkit-animation:animate 2s linear infinite -1.6s;animation:animate 2s linear infinite -1.6s}@-webkit-keyframes animate{0%,100%{left:100px;top:0}80%{left:0;top:0}85%{left:0;top:-20px;width:20px;height:20px}90%{width:40px;height:15px}95%{left:100px;top:-20px;width:20px;height:20px}}@keyframes animate{0%,100%{left:100px;top:0}80%{left:0;top:0}85%{left:0;top:-20px;width:20px;height:20px}90%{width:40px;height:15px}95%{left:100px;top:-20px;width:20px;height:20px}}
+
+figure .Loader {
+  display: none;
+}
+
+.Loader {
+  transform: scale(0.8);
 }
