@@ -1,0 +1,12 @@
+<h1>Torsten Mosumgaard Keramik</h1>
+<p>You are welcome to contact me at <a href="mailto:torsten@mosumgaard.dk">torsten@mosumgaard.dk</a> or <a href="tel:004597951950">+45 97 95 19 50</a>.</p>
+
+<section>
+  {{#each photos as |photo|}}
+    {{#link-to "photo" photo.public_id}}
+      {{x-img img=photo}}
+    {{/link-to}}
+  {{/each}}
+</section>
+
+{{outlet}}

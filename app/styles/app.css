@@ -143,30 +143,27 @@ figure img.lazyloaded {
   display: block;
 }
 
-.Modal button {
-  border: 0;
+.Modal a {
   color: hsl(0, 0%, 80%);
-  background: none;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  /* font-size: 0.75rem; */
-  font-size: 1rem;
-  padding: 0 0.8em;
+  font-size: 0.875rem;
+  padding: 0.8em;
+  text-decoration: none;
 }
 
-.Modal button:hover,
-.Modal button:active,
-.Modal button:focus {
-  border: 0;
+.Modal a:hover,
+.Modal a:active,
+.Modal a:focus {
   outline: 0;
   color: hsl(0, 0%, 100%);
 }
 
-.Modal button:first-child {
+.Modal a:first-child {
   cursor: w-resize;
 }
 
-.Modal button:last-child {
+.Modal a:last-child {
   cursor: e-resize;
 }
 
