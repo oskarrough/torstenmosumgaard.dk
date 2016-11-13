@@ -1,4 +1,8 @@
-<!-- <img class="lazyload" width="{{img.width}}" height="{{img.height}}" data-src="{{cloudinary-url img.public_id}}" alt=""> -->
 <img class="lazyload" alt="" width="{{img.width}}" height="{{img.height}}" data-sizes="auto" data-srcset="{{cloudinary-url img.public_id 1440}} 1024w, {{cloudinary-url img.public_id 640}} 640w, {{cloudinary-url img.public_id 320}} 320w">
 {{yield}}
-<div class="Ratio" style={{ratioStyles}}></div>
+
+<div>
+  <div class="Ratio" style={{ratioStyles}}>
+  </div>
+</div>
+

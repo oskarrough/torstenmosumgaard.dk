@@ -1,8 +1,6 @@
 import Ember from 'ember';
 
 export function cloudinaryUrl([id, ...rest]) {
-  // console.log(id);
-  // console.log(rest);
   let width = 500;
   let quality = 'auto';
 
@@ -10,7 +8,10 @@ export function cloudinaryUrl([id, ...rest]) {
     width = rest[0];
   }
 
-  const transformations = `q_${quality},f_auto,fl_awebp,w_${width}`;
+  // We let Cloudinary decide the quality and format, prefering webp.
+  // The "c_lfill" (limited fill) crop makes sure images are not upscaled.
+  const transformations = `q_${quality},f_auto,fl_awebp,w_${width},c_lfill`;
+
   const url = `https://res.cloudinary.com/torstenmosumgaard/image/upload/${transformations}/v1478906065/${id}`;
   return [url];
 }
