@@ -40,7 +40,7 @@ figure .Ratio {
 
 figure img {
   max-width: 100%;
-  max-height: 100%;
+  /* max-height: 100%; */
   width: 100%;
   height: auto;
   vertical-align: middle;
@@ -63,7 +63,6 @@ figure img.lazyloaded {
 
 @media (min-width: 568px) {
   body {
-    /* margin: 1% 10%; */
     margin-left: 5%;
     margin-right: 5%;
   }
@@ -125,8 +124,18 @@ figure img.lazyloaded {
 
 .Modal img {
   width: auto;
-  left: 50%;
-  transform: translate3d(-50%, 0, 0);
+  position: static;
+  margin: auto;
+  max-height: 100%;
+  max-height: 100vh;
+  /* left: 50%; */
+  /* transform: translate3d(-50%, 0, 0); */
+  object-fit: contain;
+}
+
+.Modal .Ratio {
+  background-color: transparent;
+  display: none;
 }
 
 .Modal img.lazyload + .Ratio::before,
@@ -136,10 +145,34 @@ figure img.lazyloaded {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  background-color: hsl(0, 0, 100%);
+  background-color: hsl(0, 0%, 100%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
 }
 
-.Modal .Ratio {
-  background-color: transparent;
+.Modal button {
+  border: 0;
+  color: hsl(0, 0%, 80%);
+  background: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+  padding: 0 1em;
 }
 
+.Modal button:active,
+.Modal button:focus {
+  border: 0;
+  outline: 0;
+  color: hsl(0, 0%, 100%);
+}
+
+.Modal button:first-child {
+  cursor: w-resize;
+}
+
+.Modal button:last-child {
+  cursor: e-resize;
+}
