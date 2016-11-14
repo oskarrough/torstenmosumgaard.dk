@@ -1,10 +1,6 @@
-{{model.public_id}}
-
 <div class="Modal {{if model "is-open"}}">
-  <!-- <button onclick={{action "previous"}} title="See previous photo">&larr;</button> -->
   {{link-to "Prev" "photo" previousPhoto}}
   {{x-img img=model onClick=(action "goBack")}}
-  <!-- <button onclick={{action "next"}} title="See next photo">&rarr;</button> -->
   {{link-to "Next" "photo" nextPhoto}}
 </div>
 
