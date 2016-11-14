@@ -1,9 +1,13 @@
 import Ember from 'ember';
 
-const {Component} = Ember;
+const {Component, computed} = Ember;
 
 export default Component.extend({
-  tagName: 'section'
+  tagName: 'section',
+  classNames: ['Grid']
+  // classNameBindings: ['isModalOpen:Grid--row'],
+  // isModalOpen: computed.equal('currentRouteName', 'photo')
+
   // keydownMap: {
   //   // 8:  'startBackspacing', // backspace
   //   27: 'closeModal', // escape

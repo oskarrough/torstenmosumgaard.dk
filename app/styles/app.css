@@ -213,11 +213,14 @@ figure img.lazyloaded {
 
 .Modal a {
   color: hsl(0, 0%, 80%);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 0.875rem;
-  padding: 0.8em;
+  /* text-transform: uppercase; */
+  /* letter-spacing: 0.1em; */
+  font-size: 1.7rem;
+  padding: 0.2em;
   text-decoration: none;
+  /* margin: auto; */
+  display: flex;
+  align-items: center;
 }
 
 .Modal a:hover,

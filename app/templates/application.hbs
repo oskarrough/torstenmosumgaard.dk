@@ -1,9 +1,9 @@
-<section>
+{{#image-gallery currentRouteName=currentRouteName}}
   {{#each photos as |photo|}}
     {{#link-to "photo" photo.id}}
       {{x-img img=photo}}
     {{/link-to}}
   {{/each}}
-</section>
+{{/image-gallery}}
 
 {{outlet}}
