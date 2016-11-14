@@ -59,6 +59,32 @@ section > * {
   flex-basis: 100%;
 }
 
+.Grid--row {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  flex-flow: row nowrap;
+  min-height: 2rem;
+}
+
+.Grid--row figure {
+  margin-bottom: 0;
+}
+
+.Grid--row > * {
+  flex: 1;
+}
+
+.Grid--row > a:hover {
+  flex: 160px;
+}
+
+/* .Grid--row > a.active { */
+/*   outline: 2px solid blue; */
+/* } */
+
 /* Used as image wrapper */
 figure {
   margin: auto 0 1.5rem;

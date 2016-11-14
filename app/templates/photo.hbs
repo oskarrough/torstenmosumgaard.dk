@@ -1,7 +1,7 @@
 <div class="Modal {{if model "is-open"}}">
-  {{link-to "Prev" "photo" previousPhoto}}
+  {{#link-to "photo" previousPhoto}}&larr;{{/link-to}}
   {{x-img img=model onClick=(action "goBack")}}
-  {{link-to "Next" "photo" nextPhoto}}
+  {{#link-to "photo" nextPhoto}}&rarr;{{/link-to}}
 </div>
 
 {{outlet}}
