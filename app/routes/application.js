@@ -8,8 +8,9 @@ export default Ember.Route.extend({
 
   model() {
     const url = `https://keramik.now.sh`;
+    const store = get(this, 'store');
     return get(this, 'ajax').request(url)
-      .then(res => res.resources);
+      .then(res => store.serialize(res));
   },
   setupController(controller, model) {
     const sorted = model.sort(() => 0.5 - Math.random());

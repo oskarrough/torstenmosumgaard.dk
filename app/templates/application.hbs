@@ -3,7 +3,7 @@
 
 <section>
   {{#each photos as |photo|}}
-    {{#link-to "photo" photo.public_id}}
+    {{#link-to "photo" photo.id}}
       {{x-img img=photo}}
     {{/link-to}}
   {{/each}}

@@ -1,15 +1,15 @@
 import Ember from 'ember';
 
-const {Controller, computed, get, set, inject} = Ember;
+const {Controller, computed, get, inject} = Ember;
 
 export default Controller.extend({
   store: inject.service(),
 
-  previousPhoto: computed('model.public_id', function () {
-    return this.goTo(-1).public_id;
+  previousPhoto: computed('model.id', function () {
+    return this.goTo(-1).id;
   }),
-  nextPhoto: computed('model.public_id', function () {
-    return this.goTo(1).public_id;
+  nextPhoto: computed('model.id', function () {
+    return this.goTo(1).id;
   }),
 
   goTo(steps = 1) {
