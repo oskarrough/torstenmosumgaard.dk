@@ -1,9 +1,50 @@
 html {
   font-family: Alegreya, serif;
+  font-size: 19px;
+  line-height: 1.4;
+  color: hsl(0, 0%, 5%);
 }
 
 body {
   margin: 0;
+}
+
+h1 {
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.TextColumns {
+	display: flex;
+  flex-flow: row wrap;
+}
+
+header {
+  margin: 2rem 1rem 3rem;
+}
+
+header p {
+  max-width: 36rem;
+}
+
+address {
+	display: flex;
+  flex-flow: row wrap;
+	font-style: normal;
+	font-size: 15px;
+	font-family: 'Alegreya SC', 'Alegreya', serif;
+	letter-spacing: 0.01em;
+  margin-bottom: 1rem;
+}
+
+address p {
+	margin-right: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+address a {
+	color: hsl(0,0%,10%);
 }
 
 /* Sections are used as grid wrappers */
