@@ -15,7 +15,7 @@
     <script>
       WebFont.load({
         google: {
-          families: ['Alegreya']
+          families: ['Alegreya', 'Alegreya SC']
         }
       });
     </script>
@@ -31,6 +31,30 @@
     {{content-for "head-footer"}}
   </head>
   <body>
+
+    <header>
+      <h1>Torsten Mosumgaard</h1>
+      <address>
+        <p>Keramiker</p>
+        <p>Dalstræde 2, Heltborg (<a href="https://goo.gl/maps/ZQE6wc3WG5R2" target="_blank">se kort</a>)<br>
+        7760 Hurup Thy</p>
+        <p><a href="tel:004597951950">+45 9795 1950</a><br>
+        <a href="mailto:torsten@mosumgaard.dk" title="Send en e-mail">torsten@mosumgaard.dk</a></p>
+        <p><a href="https://www.facebook.com/torstenmosumgaardkeramik/">Facebook</a><br><a href="https://www.instagram.com/torstenmosumgaard/">Instagram</a></p>
+      </address>
+      <div class="TextColumns">
+        <p>
+          Jeg tager meget gerne mod besøg. Interesserede er også velkomne til at <a href="mailto:torsten@mosumgaard.dk">skrive</a> eller <a href="tel:004597951950">ringe</a> og forhøre om ønsker. Jeg sender gerne.
+        </p>
+        <!-- <p> -->
+        <!--   Below you will be able to get a glimpse into my work. I welcome visitors. Interested are also welcome to write or call to make an inquiry. I can ship most things directly to you. -->
+        <!-- </p> -->
+        <!-- <p> -->
+          <!-- todo: german text -->
+        <!-- </p> -->
+      </div>
+    </header>
+
     {{content-for "body"}}
 
     <script src="{{rootURL}}assets/vendor.js"></script>

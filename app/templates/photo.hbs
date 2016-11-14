@@ -1,0 +1,7 @@
+<div class="Modal {{if model "is-open"}}">
+  {{link-to "Prev" "photo" previousPhoto}}
+  {{x-img img=model onClick=(action "goBack")}}
+  {{link-to "Next" "photo" nextPhoto}}
+</div>
+
+{{outlet}}
