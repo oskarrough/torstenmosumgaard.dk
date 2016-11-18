@@ -16,7 +16,14 @@ export default Controller.extend({
     const photos = get(this, 'store.photos');
     const model = get(this, 'model');
     const currentIndex = photos.indexOf(model);
-    const photo = photos.objectAt(currentIndex + steps);
+    let photo = photos.objectAt(currentIndex + steps);
+    if (!photo) {
+      if (steps > 0) {
+        photo = photos.get('firstObject');
+      } else {
+        photo = photos.get('lastObject');
+      }
+    }
     return photo;
   },
 
