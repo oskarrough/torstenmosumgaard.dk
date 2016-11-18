@@ -14,17 +14,6 @@ h1 {
   margin-bottom: 1rem;
 }
 
-.TextColumns {
-	display: flex;
-  flex-flow: row wrap;
-}
-
-.TextColumns p {
-  /* max-width: 50%; */
-  flex: 1;
-  padding-right: 1rem;
-}
-
 header {
   margin: 2rem 1rem 3rem;
 }
@@ -34,23 +23,23 @@ header p {
 }
 
 address {
-	display: flex;
+  display: flex;
   flex-flow: row wrap;
-	font-style: normal;
-	font-size: 15px;
-	font-family: 'Alegreya SC', 'Alegreya', serif;
-	letter-spacing: 0.01em;
+  font-style: normal;
+  font-size: 15px;
+  font-family: 'Alegreya SC', 'Alegreya', serif;
+  letter-spacing: 0.01em;
   margin-bottom: 1rem;
 }
 
 address p {
-	margin-right: 1.5rem;
+  margin-right: 1.5rem;
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
 
 address a {
-	color: hsl(0,0%,10%);
+  color: hsl(0,0%,10%);
 }
 
 /* Sections are used as grid wrappers */
@@ -65,6 +54,7 @@ section > * {
   flex-basis: 100%;
 }
 
+/* Modifier that turns the grid into a horizontal thumbnail style */
 .Grid--row {
   position: fixed;
   left: 0;
@@ -91,7 +81,8 @@ section > * {
 /*   outline: 2px solid blue; */
 /* } */
 
-/* Used as image wrapper */
+/* Wraps all images */
+
 figure {
   margin: auto 0.5rem 1.5rem 0;
   position: relative;
@@ -112,7 +103,6 @@ figure img {
   height: auto;
   max-width: 100%;
   vertical-align: middle;
-  transition: transform 400ms 500ms, opacity 200ms 100ms;
 }
 
 /* Wrapper for .Ratio. Only here to avoid flexbox directly on .Ratio */
@@ -128,18 +118,17 @@ figure .Ratio {
 img.lazyload,
 img.lazyloading {
   opacity: 0;
-  /* transform: translateY(-100%); */
 }
 
 figure img.lazyloaded {
-  /* transform: translateY(0); */
   opacity: 1;
+  transition: opacity 200ms 100ms;
 }
 
 @media (min-width: 568px) {
   body {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 4%;
+    margin-right: 4%;
   }
 
   section > * {
@@ -219,12 +208,9 @@ figure img.lazyloaded {
 
 .Modal a {
   color: hsl(0, 0%, 80%);
-  /* text-transform: uppercase; */
-  /* letter-spacing: 0.1em; */
   font-size: 1.7rem;
   padding: 0.2em;
   text-decoration: none;
-  /* margin: auto; */
   display: flex;
   align-items: center;
 }
@@ -244,12 +230,26 @@ figure img.lazyloaded {
   cursor: e-resize;
 }
 
+/* Wrap <p> tags in this */
+.TextColumns {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.TextColumns p {
+  min-width: 9rem;
+  flex: 1;
+  padding-right: 1rem;
+}
+
+/* A CSS loader/spinner */
 .Loader,.Loader i{position:absolute}.Loader{width:100px;height:40px;top:50%;left:50%;margin:-20px -50px}.Loader i{width:20px;height:20px;background:hsl(0, 0%, 10%);border-radius:50%}.Loader i:nth-child(1){-webkit-animation:animate 2s linear infinite;animation:animate 2s linear infinite}.Loader i:nth-child(2){-webkit-animation:animate 2s linear infinite -.4s;animation:animate 2s linear infinite -.4s}.Loader i:nth-child(3){-webkit-animation:animate 2s linear infinite -.8s;animation:animate 2s linear infinite -.8s}.Loader i:nth-child(4){-webkit-animation:animate 2s linear infinite -1.2s;animation:animate 2s linear infinite -1.2s}.Loader i:nth-child(5){-webkit-animation:animate 2s linear infinite -1.6s;animation:animate 2s linear infinite -1.6s}@-webkit-keyframes animate{0%,100%{left:100px;top:0}80%{left:0;top:0}85%{left:0;top:-20px;width:20px;height:20px}90%{width:40px;height:15px}95%{left:100px;top:-20px;width:20px;height:20px}}@keyframes animate{0%,100%{left:100px;top:0}80%{left:0;top:0}85%{left:0;top:-20px;width:20px;height:20px}90%{width:40px;height:15px}95%{left:100px;top:-20px;width:20px;height:20px}}
+
+.Loader {
+  transform: scale(0.8);
+}
 
 figure .Loader {
   display: none;
 }
 
-.Loader {
-  transform: scale(0.8);
-}

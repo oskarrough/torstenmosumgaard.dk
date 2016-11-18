@@ -1,9 +1,7 @@
-{{#image-gallery currentRouteName=currentRouteName}}
-  {{#each photos as |photo|}}
-    {{#link-to "photo" photo.id}}
-      {{x-img img=photo}}
-    {{/link-to}}
-  {{/each}}
+{{#image-gallery currentRouteName=currentRouteName items=photos as |photo|}}
+  <a href="{{href-to 'photo' photo.id}}">
+    {{x-img img=photo}}
+  </a>
 {{/image-gallery}}
 
 {{outlet}}
