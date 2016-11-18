@@ -7,6 +7,7 @@ html {
 
 body {
   margin: 0;
+  overflow-y: scroll;
 }
 
 h1 {
@@ -26,7 +27,7 @@ address {
   display: flex;
   flex-flow: row wrap;
   font-style: normal;
-  font-size: 15px;
+  font-size: 0.875rem;
   font-family: 'Alegreya SC', 'Alegreya', serif;
   letter-spacing: 0.01em;
   margin-bottom: 1rem;
@@ -141,22 +142,37 @@ figure img.lazyloaded {
     flex-basis: 25%;
   }
 
-  section > *:nth-child(5n - 2) {
+  section > *:nth-child(5n + 3) {
     flex-basis: 50%;
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1040px) {
+  section > *:nth-child(5n + 3),
   section > * {
     flex-basis: 16%;
+    flex-basis: calc(100% / 6);
+    /* max-height: 3rem; */
   }
 
-  section > *:nth-child(4n) {
-    flex-basis: 16%;
-  }
+  /* section > *:nth-child(9n) { */
+  /*   flex-basis: 33.333%; */
+  /*   flex-basis: calc(100% / 6 * 2); */
+  /* } */
 
-  section > *:nth-child(6n-4) {
-    flex-basis: 33%;
+  section > *:nth-child(9n) {
+    flex-basis: calc(100% / 6 * 2);
+  }
+  section > *:nth-child(28n) {
+    flex-basis: calc(100% / 6 * 4);
+  }
+  section > *:nth-child(29n) {
+    flex-basis: calc(100% / 6 * 2);
+  }
+  section > *:nth-child(36n) {
+    margin-left: calc(100% / 6 * 1);
+    flex-basis: calc(100% / 6 * 4);
+    margin-right: calc(100% / 6 * 1);
   }
 }
 
