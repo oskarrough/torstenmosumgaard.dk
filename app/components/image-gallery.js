@@ -1,10 +1,21 @@
 import Ember from 'ember';
 
-const {Component} = Ember;
+const {Component, run} = Ember;
 
 export default Component.extend({
   tagName: 'section',
-  classNames: ['Grid']
+  classNames: ['Grid'],
+
+  didInsertElement() {
+    run.scheduleOnce('afterRender', this, this.preloadImages);
+  },
+
+  preloadImages(amount = 3) {
+    let images = this.element.querySelectorAll('.lazyload');
+    let firstThree = Array.from(images).slice(0,amount);
+    firstThree.forEach(img => img.classList.add('lazypreload'));
+  }
+
   // classNameBindings: ['isModalOpen:Grid--row'],
   // isModalOpen: Ember.computed.equal('currentRouteName', 'photo')
 
