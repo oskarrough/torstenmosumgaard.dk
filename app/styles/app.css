@@ -19,6 +19,12 @@ h1 {
   flex-flow: row wrap;
 }
 
+.TextColumns p {
+  /* max-width: 50%; */
+  flex: 1;
+  padding-right: 1rem;
+}
+
 header {
   margin: 2rem 1rem 3rem;
 }
@@ -70,7 +76,7 @@ section > * {
 }
 
 .Grid--row figure {
-  margin-bottom: 0;
+  margin: auto 0 0;
 }
 
 .Grid--row > * {
@@ -87,7 +93,7 @@ section > * {
 
 /* Used as image wrapper */
 figure {
-  margin: auto 0 1.5rem;
+  margin: auto 0.5rem 1.5rem 0;
   position: relative;
   overflow: hidden;
   -webkit-touch-callout: none;
@@ -146,7 +152,7 @@ figure img.lazyloaded {
     flex-basis: 25%;
   }
 
-  section > *:nth-child(4n) {
+  section > *:nth-child(5n - 2) {
     flex-basis: 50%;
   }
 }

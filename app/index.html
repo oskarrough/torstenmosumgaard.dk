@@ -20,8 +20,10 @@
       });
     </script>
     <script>
+      // Configure lazysizes to load more
+      window.lazySizesConfig = window.lazySizesConfig || {};
+      lazySizesConfig.loadMode = 3;
       // Using loadJS and picturefill we polyfill responsive images
-      // https://github.com/filamentgroup/loadJS + https://github.com/scottjehl/picturefill
       !function(a){var b=function(b,c){"use strict";var d=a.document.getElementsByTagName("script")[0],e=a.document.createElement("script");return e.src=b,e.async=!0,d.parentNode.insertBefore(e,d),c&&"function"==typeof c&&(e.onload=c),e};"undefined"!=typeof module?module.exports=b:a.loadJS=b}("undefined"!=typeof global?global:this);
       if (!window.HTMLPictureElement){
         document.createElement('picture');
@@ -43,15 +45,9 @@
         <p><a href="https://www.facebook.com/torstenmosumgaardkeramik/">Facebook</a><br><a href="https://www.instagram.com/torstenmosumgaard/">Instagram</a></p>
       </address>
       <div class="TextColumns">
-        <p>
-          Jeg tager meget gerne mod besøg. Interesserede er også velkomne til at <a href="mailto:torsten@mosumgaard.dk">skrive</a> eller <a href="tel:004597951950">ringe</a> og forhøre om ønsker. Jeg sender gerne.
-        </p>
-        <!-- <p> -->
-        <!--   Below you will be able to get a glimpse into my work. I welcome visitors. Interested are also welcome to write or call to make an inquiry. I can ship most things directly to you. -->
-        <!-- </p> -->
-        <!-- <p> -->
-          <!-- todo: german text -->
-        <!-- </p> -->
+        <p>Jeg tager meget gerne mod besøg. Interesserede er også velkomne til at skrive eller ringe og forhøre om ønsker. Jeg sender gerne.</p>
+        <p>I welcome visitors. Interested are also invited to write or call with wishes. I am glad to ship packages.</p>
+        <p>Ich nehme gerne Besuch. Interessierte sind eingeladen zu schreiben oder anrufen mit Anfragen. Ich schicke gerne.</p>
       </div>
     </header>
 
