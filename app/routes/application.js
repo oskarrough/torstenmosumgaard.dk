@@ -12,11 +12,8 @@ export default Ember.Route.extend({
     return get(this, 'ajax').request(url)
       .then(res => store.serialize(res));
   },
-  setupController(controller, model) {
-    const sorted = model.sort(() => 0.5 - Math.random());
-    const photos = sorted;
-    set(controller, 'photos', photos);
-    set(this, 'store.photos', photos);
+  afterModel(model) {
+    set(this, 'store.photos', model);
   }
 });
 

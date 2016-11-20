@@ -1,10 +1,17 @@
 import Ember from 'ember';
 
-const {Component, run} = Ember;
+const {Component, computed, get, run} = Ember;
 
 export default Component.extend({
   tagName: 'section',
   classNames: ['Grid'],
+
+  sorted: computed('items', {
+    get() {
+      const items = get(this, 'items');
+      return items.sort(() => 0.5 - Math.random());
+    }
+  }),
 
   didInsertElement() {
     run.scheduleOnce('afterRender', this, this.preloadImages);

@@ -1,4 +1,4 @@
-{{#image-gallery currentRouteName=currentRouteName items=photos as |photo|}}
+{{#image-gallery currentRouteName=currentRouteName items=model as |photo|}}
   <a href="{{href-to 'photo' photo.id}}">
     {{x-img img=photo}}
   </a>
