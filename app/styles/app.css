@@ -55,10 +55,7 @@ address p {
 @media (max-width: 800px) {
   header {
     margin-top: 1rem;
-  }
-
-  header img {
-    float: none;
+    font-size: 0.875rem;
   }
 
   address {
