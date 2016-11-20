@@ -1938,6 +1938,19 @@ ember-export-application-global@^1.0.5:
   dependencies:
     ember-cli-babel "^5.1.10"
 
+ember-getowner-polyfill@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/ember-getowner-polyfill/-/ember-getowner-polyfill-1.0.1.tgz#f60a31d25d642461dac4b4746184afaf7f5084ae"
+  dependencies:
+    ember-cli-babel "^5.1.5"
+
+ember-href-to@1.9.0:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/ember-href-to/-/ember-href-to-1.9.0.tgz#bc590d6e5ebf3c6a12207856f9d01aacee258dc7"
+  dependencies:
+    ember-cli-babel "^5.1.6"
+    ember-getowner-polyfill "^1.0.1"
+
 ember-load-initializers@^0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/ember-load-initializers/-/ember-load-initializers-0.5.1.tgz#76e3db23c111dbdcd3ae6f687036bf0b56be0cbe"
