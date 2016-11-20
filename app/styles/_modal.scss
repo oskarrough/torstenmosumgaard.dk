@@ -1,0 +1,71 @@
+.Modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  /* transition: background-color 200ms 500ms, transform 500ms cubic-bezier(0.4, 0, 0.2, 1); */
+  pointer-events: none;
+  transform: translate3d(0, 100%, 0);
+  background-color: black;
+}
+
+.Modal.is-open {
+  display: flex;
+  pointer-events: auto;
+  cursor: s-resize;
+  transform: translate3d(0, 0, 0);
+}
+
+.Modal figure {
+  width: 100%;
+  margin: auto;
+}
+
+.Modal img {
+  width: auto;
+  position: static;
+  margin: auto;
+  max-height: 100%;
+  max-height: 100vh;
+  /* left: 50%; */
+  /* transform: translate3d(-50%, 0, 0); */
+  object-fit: contain;
+}
+
+.Modal .Ratio {
+  background-color: transparent;
+  display: none;
+}
+
+.Modal img.lazyload + .Loader,
+.Modal img.lazyloading + .Loader {
+  display: block;
+}
+
+.Modal a {
+  color: hsl(0, 0%, 80%);
+  font-size: 1.7rem;
+  padding: 0.2em;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.Modal a:hover,
+.Modal a:active,
+.Modal a:focus {
+  outline: 0;
+  color: hsl(0, 0%, 100%);
+}
+
+.Modal a:first-child {
+  cursor: w-resize;
+}
+
+.Modal a:last-child {
+  cursor: e-resize;
+}
+
+

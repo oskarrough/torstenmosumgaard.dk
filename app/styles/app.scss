@@ -1,0 +1,102 @@
+@import "layout";
+@import "header";
+@import "modal";
+@import "loader";
+
+html {
+  font-family: Alegreya, serif;
+  font-size: 19px;
+  line-height: 1.4;
+  color: hsl(0, 0%, 5%);
+}
+
+body {
+  margin: 0 1rem;
+  overflow-y: scroll;
+}
+
+h1 {
+  font-weight: normal;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+p {
+  margin-top: 0;
+}
+
+/* Wraps all images */
+figure {
+  margin: auto 0.5rem 1.5rem 0;
+  position: relative;
+  overflow: hidden;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+figure img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+figure .Ratio {
+  margin-top: auto;
+  background-color: hsl(0, 0%, 90%);
+}
+
+/* Wrapper for .Ratio. Only here to avoid flexbox directly on .Ratio */
+figure > div:last-child {
+  margin-top: auto;
+}
+
+/* Lazyloading */
+img.lazyload,
+img.lazyloading {
+  opacity: 0;
+}
+
+img.lazyloaded {
+  opacity: 1;
+  transition: opacity 200ms 100ms;
+}
+
+/* Wrap <p> tags in this */
+.TextColumns {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.TextColumns p {
+  flex-basis: 100%;
+  padding-right: 1rem;
+  box-sizing: border-box;
+}
+
+@media (min-width: 568px) {
+  .TextColumns p {
+    flex-basis: 33%;
+  }
+}
+
+// @media (min-width: 1024px) {
+//   .TextColumns p {
+//     flex-basis: 25%;
+//   }
+// }
+
+// @media (min-width: 1040px) {
+//   .TextColumns p {
+//     flex-basis: 16%;
+//     flex-basis: calc(100% / 6 * 2);
+//   }
+// }
+
