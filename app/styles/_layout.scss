@@ -1,29 +1,19 @@
-/* Modifier that turns the grid into a horizontal thumbnail style */
-.Grid--row {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 2;
-  flex-flow: row nowrap;
-  min-height: 2rem;
+/* Wrap <p> tags in this */
+.TextColumns {
+  display: flex;
+  flex-flow: row wrap;
 }
 
-.Grid--row figure {
-  margin: auto 0 0;
-}
+.TextColumns > * {
+  box-sizing: border-box;
+  flex-basis: 100%;
+  padding-right: 0.5rem;
 
-.Grid--row > * {
-  flex: 1;
+  @media (min-width: 568px) {
+    flex-basis: 33%;
+    flex-basis: calc(100% / 6 * 2);
+  }
 }
-
-.Grid--row > a:hover {
-  flex: 160px;
-}
-
-/* .Grid--row > a.active { */
-/*   outline: 2px solid blue; */
-/* } */
 
 /* Sections are used as grid wrappers */
 section {
@@ -48,15 +38,14 @@ section > * {
   }
 }
 
-@media (min-width: 1024px) {
-  section > * {
-    flex-basis: 25%;
-  }
-
-  section > *:nth-child(5n + 3) {
-    flex-basis: 50%;
-  }
-}
+// @media (min-width: 1024px) {
+//   section > * {
+//     flex-basis: 25%;
+//   }
+//   section > *:nth-child(5n + 3) {
+//     flex-basis: 50%;
+//   }
+// }
 
 @media (min-width: 1040px) {
   section > *:nth-child(5n + 3),
@@ -89,4 +78,30 @@ section > * {
   }
 }
 
+/* Modifier that turns the grid into a horizontal thumbnail style */
+.Grid--row {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  flex-flow: row nowrap;
+  min-height: 2rem;
+}
+
+.Grid--row figure {
+  margin: auto 0 0;
+}
+
+.Grid--row > * {
+  flex: 1;
+}
+
+.Grid--row > a:hover {
+  flex: 160px;
+}
+
+/* .Grid--row > a.active { */
+/*   outline: 2px solid blue; */
+/* } */
 
