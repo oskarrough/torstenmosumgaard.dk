@@ -6,7 +6,7 @@ export default Component.extend({
   tagName: 'section',
   classNames: ['Grid'],
 
-  sorted: computed('items', {
+  sortedItems: computed('items', {
     get() {
       const items = get(this, 'items');
       return items.sort(() => 0.5 - Math.random());
@@ -19,6 +19,9 @@ export default Component.extend({
 
   preloadImages(amount = 3) {
     let images = this.element.querySelectorAll('.lazyload');
+    if (images.length < 1) {
+      return;
+    }
     let firstThree = Array.from(images).slice(0,amount);
     firstThree.forEach(img => img.classList.add('lazypreload'));
   }

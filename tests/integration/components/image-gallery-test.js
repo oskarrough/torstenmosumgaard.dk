@@ -6,19 +6,16 @@ moduleForComponent('image-gallery', 'Integration | Component | image gallery', {
 });
 
 test('it renders', function(assert) {
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
-
-  this.render(hbs`{{image-gallery}}`);
-
-  assert.equal(this.$().text().trim(), '');
+  this.set('items', [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 
   // Template block usage:
   this.render(hbs`
-    {{#image-gallery}}
-      template block text
+    {{#image-gallery items=items as |item|}}
+      <i>{{item}}</i>
     {{/image-gallery}}
   `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  var allItems = this.$('i').text().trim();
+  // there is a very low chance this this might fail
+  assert.notEqual(allItems, '12345678910');
 });

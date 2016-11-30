@@ -5,16 +5,19 @@ const {Component, computed, get} = Ember;
 export default Component.extend({
   tagName: 'figure',
 
-  ratioStyles: computed('img.{width,height}', {
+  ratio: computed('img.{width,height}', {
     get() {
       const img = get(this, 'img');
       if (!img) {
         return '';
       }
       const {width, height} = img;
-      const ratio = (height / width) * 100;
-      return Ember.String.htmlSafe(`padding-bottom: ${ratio}%`);
+      return (height / width) * 100;
     }
+  }),
+
+  inlineStyles: computed('ratio', function () {
+    return Ember.String.htmlSafe(`padding-bottom: ${get(this, 'ratio')}%`);
   }),
 
   click() {
