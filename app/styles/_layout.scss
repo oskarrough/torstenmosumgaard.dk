@@ -7,11 +7,11 @@
 .TextColumns > * {
   box-sizing: border-box;
   flex-basis: 100%;
-  padding-right: 0.5rem;
 
   @media (min-width: 568px) {
     flex-basis: 33%;
     flex-basis: calc(100% / 6 * 2);
+    padding-right: 2rem;
   }
 }
 
