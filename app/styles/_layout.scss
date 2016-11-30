@@ -36,6 +36,16 @@ section > * {
   section > * {
     flex-basis: 33%;
   }
+
+  // Make every second row top aligned
+  // section > *:nth-child(6n-2),
+  // section > *:nth-child(6n-1),
+  // section > *:nth-child(6n) {
+  //   figure {
+  //     margin-top: 0;
+  //     margin-bottom: 2rem;
+  //   }
+  // }
 }
 
 // @media (min-width: 1024px) {
@@ -104,4 +114,3 @@ section > * {
 /* .Grid--row > a.active { */
 /*   outline: 2px solid blue; */
 /* } */
-
