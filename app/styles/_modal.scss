@@ -1,4 +1,6 @@
 .Modal {
+  display: flex;
+  flex-flow: column;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -12,10 +14,14 @@
 }
 
 .Modal.is-open {
-  display: flex;
   pointer-events: auto;
-  cursor: s-resize;
+  cursor: e-resize;
   transform: translate3d(0, 0, 0);
+}
+
+.Modal-inner {
+  display: flex;
+  flex: 1;
 }
 
 .Modal figure {
@@ -67,5 +73,3 @@
 .Modal a:last-child {
   cursor: e-resize;
 }
-
-

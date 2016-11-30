@@ -1,7 +1,7 @@
-<div class="Modal {{if model "is-open"}}">
+{{#modal-dialog model=model on-close=(action "goBack")}}
   {{#link-to "photo" previousPhoto}}&larr;{{/link-to}}
-  {{x-img img=model onClick=(action "goBack")}}
+  {{x-img img=model onClick=(action "next")}}
   {{#link-to "photo" nextPhoto}}&rarr;{{/link-to}}
-</div>
+{{/modal-dialog}}
 
 {{outlet}}

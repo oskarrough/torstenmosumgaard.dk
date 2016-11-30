@@ -32,10 +32,10 @@ export default Controller.extend({
       this.transitionToRoute('application');
     },
     next() {
-      this.goTo(1);
+      this.transitionToRoute('photo', this.goTo(1));
     },
     previous() {
-      this.goTo(-1);
+      this.transitionToRoute('photo', this.goTo(-1));
     }
   }
 });
