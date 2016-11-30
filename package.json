@@ -1,7 +1,7 @@
 {
   "name": "tm",
   "version": "1.0.0",
-  "description": "Small description for tm goes here",
+  "description": "Website for Torsten Mosumgaard Keramik",
   "private": true,
   "directories": {
     "doc": "doc",

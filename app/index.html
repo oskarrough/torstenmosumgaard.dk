@@ -6,39 +6,41 @@
     <title>Torsten Mosumgaard Keramik</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
     <link rel="manifest" href="/manifest.json">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#e42520">
     <meta name="theme-color" content="#ffffff">
-
     {{content-for "head"}}
-
-    <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+    <!-- vendor css was here -->
     <link rel="stylesheet" href="{{rootURL}}assets/tm.css">
-    <script src="https://unpkg.com/webfontloader@1.6.26"></script>
+
     <script>
-      WebFont.load({
-        google: {
-          families: ['Alegreya', 'Alegreya SC']
-        }
-      });
-    </script>
-    <script>
-      // Using loadJS and picturefill we polyfill responsive images
+      // loadjs
       !function(a){var b=function(b,c){"use strict";var d=a.document.getElementsByTagName("script")[0],e=a.document.createElement("script");return e.src=b,e.async=!0,d.parentNode.insertBefore(e,d),c&&"function"==typeof c&&(e.onload=c),e};"undefined"!=typeof module?module.exports=b:a.loadJS=b}("undefined"!=typeof global?global:this);
+
+      loadJS('https://unpkg.com/webfontloader@1.6.26');
+      WebFontConfig = {
+        google: {families: ['Alegreya', 'Alegreya SC']}
+      };
+
+      // Polyfill responsive images
       if (!window.HTMLPictureElement){
         document.createElement('picture');
         loadJS('https://unpkg.com/picturefill@3.0.2/dist/picturefill.min.js');
       }
+
     </script>
     {{content-for "head-footer"}}
   </head>
   <body>
 
     <header>
-      <img class="Logo" width=30" height="39" src="{{rootURL}}images/futtog.svg" alt="Torsten Mosumgaard Keramik">
+      <!-- <img class="Logo" width=30" height="39" src="{{rootURL}}images/futtog.svg" alt="Torsten Mosumgaard Keramik"> -->
+      <svg class="logo" width="30" height="39" viewBox="0 0 100 130" xmlns="http://www.w3.org/2000/svg"><title>Torsten Mosumgaard Keramik</title><g transform="matrix(-1 0 0 1 100 0)" fill="#E42520" fill-rule="evenodd"><path d="M0,0 L100,0 L100,100 L0,100 L0,0 Z M75,43.5 C85.2172679,43.5 93.5,35.2172679 93.5,25 C93.5,14.7827321 85.2172679,6.5 75,6.5 C64.7827321,6.5 56.5,14.7827321 56.5,25 C56.5,35.2172679 64.7827321,43.5 75,43.5 Z M0,0 L50,0 L50,50 L0,50 L0,0 Z"/><circle cx="75" cy="110" r="20"/><circle cx="25" cy="110" r="20"/><path d="M0 10L10 0 30 0 40 10 30 50 10 50"/></g></svg>
+
       <p>Keramiker</p>
       <h1>
         <span>Torsten Mosumgaard</span>
