@@ -11,7 +11,7 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{modal-dialog}}`);
 
-  assert.equal(this.$().text().trim(), '');
+  assert.equal(this.$().text().trim(), 'close');
 
   // Template block usage:
   this.render(hbs`
