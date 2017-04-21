@@ -1,27 +1,30 @@
-import Ember from 'ember';
+import Ember from 'ember'
 
-const {Component, computed, get} = Ember;
+const {Component, computed, get} = Ember
 
 export default Component.extend({
-  tagName: 'figure',
+	tagName: 'figure',
 
-  ratioStyles: computed('img.{width,height}', {
-    get() {
-      const img = get(this, 'img');
-      if (!img) {
-        return '';
-      }
-      const {width, height} = img;
-      const ratio = (height / width) * 100;
-      return Ember.String.htmlSafe(`padding-bottom: ${ratio}%`);
-    }
-  }),
+	ratio: computed('img.{width,height}', {
+		get() {
+			const img = get(this, 'img')
+			if (!img) {
+				return ''
+			}
+			const {width, height} = img
+			return height / width * 100
+		}
+	}),
 
-  click() {
-    const onClick = get(this, 'onClick');
-    if (!onClick) {
-      return;
-    }
-    onClick(get(this, 'img'));
-  }
-});
+	inlineStyles: computed('ratio', function() {
+		return Ember.String.htmlSafe(`padding-bottom: ${get(this, 'ratio')}%`)
+	}),
+
+	click() {
+		const onClick = get(this, 'onClick')
+		if (!onClick) {
+			return
+		}
+		onClick(get(this, 'img'))
+	}
+})

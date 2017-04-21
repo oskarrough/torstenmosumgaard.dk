@@ -1,15 +1,21 @@
 <IfModule mod_rewrite.c>
-	Options +FollowSymLinks
+  Options +FollowSymLinks
 
-	RewriteEngine On
+  RewriteEngine On
 
-	# we're behind nginx ssl proxy, hence the non-standard check for no-SSL:
-	# RewriteCond %{HTTP:X-Forwarded-SSL} !on
-	# RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  # we're behind nginx ssl proxy, hence the non-standard check for no-SSL:
+  # RewriteCond %{HTTP:X-Forwarded-SSL} !on
+  # RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-	# Redirect to "no www"
-	RewriteBase /
-	RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-	RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+  # Redirect to "no www"
+  RewriteBase /
+  RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+  RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+  # Redirect everything to index.html
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
 </IfModule>
 
