@@ -4,7 +4,7 @@
   "description": "Website for Torsten Mosumgaard Keramik",
   "private": true,
   "scripts": {
-    "build": "ember build",
+    "build": "ember build --prod",
     "start": "ember server",
     "test": "ember test",
     "deploy": "ember build -p; mv dist/index.html dist/200.html; surge dist keramik.surge.sh"
