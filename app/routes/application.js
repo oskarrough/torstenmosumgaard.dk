@@ -11,6 +11,7 @@ export default Ember.Route.extend({
 		const store = get(this, 'store')
 		return get(this, 'ajax').request(url).then(res => store.serialize(res))
 	},
+
 	afterModel(model) {
 		set(this, 'store.photos', model)
 	}
