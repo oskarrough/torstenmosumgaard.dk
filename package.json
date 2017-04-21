@@ -7,7 +7,8 @@
     "build": "ember build --prod",
     "start": "ember server",
     "test": "ember test",
-    "deploy": "ember build -p; mv dist/index.html dist/200.html; surge dist keramik.surge.sh"
+    "deploy": "ember build -p; mv dist/index.html dist/200.html; surge dist keramik.surge.sh",
+    "lint": "prettier --write --use-tabs --single-quote --no-semi --no-bracket-spacing 'app/**/*.js' 'tests/**/*.js'"
   },
   "repository": "",
   "engines": {
@@ -36,7 +37,8 @@
     "ember-export-application-global": "^1.0.5",
     "ember-load-initializers": "^0.5.1",
     "ember-resolver": "^2.0.3",
-    "loader.js": "^4.0.10"
+    "loader.js": "^4.0.10",
+    "prettier": "^1.2.2"
   },
   "dependencies": {
     "ember-href-to": "1.9.0",
