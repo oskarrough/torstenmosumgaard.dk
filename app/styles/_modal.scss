@@ -15,7 +15,7 @@
 
 .Modal.is-open {
   pointer-events: auto;
-  cursor: e-resize;
+  // cursor: e-resize;
   transform: translate3d(0, 0, 0);
 }
 
@@ -50,32 +50,57 @@
   display: block;
 }
 
-.Modal a {
+.Modal-pager {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  height: 100%;
   color: hsl(0, 0%, 80%);
-  font-size: 1.7rem;
+  font-size: 2rem;
   padding: 0.2em;
   text-decoration: none;
   display: flex;
   align-items: center;
+  min-width: 15%;
+  text-align: center;
+  font-family: 'system-ui', sans-serif;
+  transition: opacity 200ms;
+  opacity: 0;
+
+  svg {
+    fill: white;
+  }
 }
 
-.Modal a:hover,
-.Modal a:active,
-.Modal a:focus {
+.Modal-pager:hover,
+.Modal-pager:active,
+.Modal-pager:focus {
   outline: 0;
-  color: hsl(0, 0%, 100%);
+  opacity: 1;
 }
 
-.Modal a:first-child {
-  cursor: w-resize;
+.Modal-pager:first-child {
+  left: 0;
+  justify-content: flex-start;
 }
 
-.Modal a:last-child {
-  cursor: e-resize;
+.Modal-pager:last-child {
+  right: 0;
+  justify-content: flex-end;
+
+  svg {
+    transform: rotateY(-180deg);
+  }
 }
 
 .Modal-closeBtn {
   position: absolute;
   top: 0.8rem;
   left: 0.8rem;
+  background: transparent;
+  border: 0;
+
+  svg {
+    fill: white;
+  }
 }
