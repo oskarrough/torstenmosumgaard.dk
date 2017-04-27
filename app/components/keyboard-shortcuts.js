@@ -9,7 +9,6 @@ export default Component.extend({
 	willDestroy() {
 		this.disableShortcuts()
 	},
-
 	enableShortcuts() {
 		$(document).on(`keydown.${this.id}`, event => {
 			const key = event.key
