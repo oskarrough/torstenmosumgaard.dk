@@ -95,11 +95,12 @@
 
 .Modal-closeBtn {
   position: absolute;
-  top: 0.8rem;
-  left: 0.8rem;
+  top: 0;
+  left: 0;
+  padding: 1rem;
   background: transparent;
   border: 0;
-
+  
   svg {
     fill: white;
   }
