@@ -1,20 +1,53 @@
 /* A CSS loader/spinner */
-.Loader,.Loader i{position:absolute}.Loader{width:100px;height:40px;top:50%;left:50%;margin:-20px -50px}.Loader i{width:20px;height:20px;background:hsl(0, 0%, 10%);border-radius:50%}.Loader i:nth-child(1){-webkit-animation:animate 2s linear infinite;animation:animate 2s linear infinite}.Loader i:nth-child(2){-webkit-animation:animate 2s linear infinite -.4s;animation:animate 2s linear infinite -.4s}.Loader i:nth-child(3){-webkit-animation:animate 2s linear infinite -.8s;animation:animate 2s linear infinite -.8s}.Loader i:nth-child(4){-webkit-animation:animate 2s linear infinite -1.2s;animation:animate 2s linear infinite -1.2s}.Loader i:nth-child(5){-webkit-animation:animate 2s linear infinite -1.6s;animation:animate 2s linear infinite -1.6s}@-webkit-keyframes animate{0%,100%{left:100px;top:0}80%{left:0;top:0}85%{left:0;top:-20px;width:20px;height:20px}90%{width:40px;height:15px}95%{left:100px;top:-20px;width:20px;height:20px}}@keyframes animate{0%,100%{left:100px;top:0}80%{left:0;top:0}85%{left:0;top:-20px;width:20px;height:20px}90%{width:40px;height:15px}95%{left:100px;top:-20px;width:20px;height:20px}}
 
 .Loader {
-  transform: scale(0.5);
+  // transform: scale(0.5);
   top: initial;
   left: initial;
   margin: 0;
 }
 
+figure .Loader {
+  display: none;
+}
+
 .Modal .Loader {
+	position: absolute;
   top: 50%;
   left: 50%;
   margin: -20px -50px;
+	z-index: 1;
 }
 
-figure .Loader {
-  display: none;
+
+.Loader-eye {
+	width: 20px;
+	height: 20px;
+	background-color: hsla(0, 0%, 0%, 0.1);
+	border-radius: 50%;
+	box-shadow: 30px 0px 0px 0px hsla(0, 0%, 0%, 0.1);
+	position: relative;
+}
+
+.Loader-eye::after {
+	background-color: $blue;
+	width: 8px;
+	height: 8px;
+	box-shadow: 30px 0px 0px 0px $blue;
+	border-radius: 50%;
+	left: 0;
+	top: 8px;
+	position: absolute;
+	content: "";
+	animation: eyeball 2s infinite alternate;
+}
+
+@keyframes eyeball {
+	0% {
+		transform: translateX(9px);
+	}
+	100% {
+		transform: translateX(0);
+	}
 }
 
