@@ -1,28 +1,22 @@
-# Tm
+# Torsten Mosumgaard Gallery
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is an Ember.js application that renders a gallery from a Cloudinary.com instance. It is connected with a simple node API to extract the images: https://gitlab.com/oskarrough/torstenmosumgaard-api.
+
+You can format all scripts using `yarn format`. It's a good idea to run this before committing.
 
 ## Prerequisites
 
-You will need the following things properly installed on your computer.
-
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+You will need [Git](https://git-scm.com/), [Node.js](https://nodejs.org/) (with NPM or Yarn) and [Ember CLI](https://ember-cli.com/).
 
 ## Installation
 
 * `git clone <repository-url>` this repository
-* `cd tm`
-* `npm install`
-* `bower install`
+* `cd torstenmosumgaard-gallery`
+* `yarn`
 
 ## Running / Development
 
-* `ember serve`
+* `yarn start`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
 ### Code Generators
@@ -41,13 +35,4 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+The master branch is automatically deployed via netlify.com to https://torstenmosumgaard.dk.
