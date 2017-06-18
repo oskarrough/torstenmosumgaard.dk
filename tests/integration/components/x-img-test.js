@@ -18,8 +18,10 @@ test('it renders', function(assert) {
 		bytes: 109669,
 		width: 1024,
 		height: 768,
-		url: 'http://res.cloudinary.com/torstenmosumgaard/image/upload/v1478980184/sample.jpg',
-		secure_url: 'https://res.cloudinary.com/torstenmosumgaard/image/upload/v1478980184/sample.jpg'
+		url:
+			'http://res.cloudinary.com/torstenmosumgaard/image/upload/v1478980184/sample.jpg',
+		secure_url:
+			'https://res.cloudinary.com/torstenmosumgaard/image/upload/v1478980184/sample.jpg'
 	}
 	this.set('img', exampleData)
 
