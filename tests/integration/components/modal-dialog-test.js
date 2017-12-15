@@ -15,5 +15,10 @@ test('it renders', function(assert) {
   `
 	)
 
-	assert.equal(this.$('.Modal-inner').text().trim(), 'template block text')
+	assert.equal(
+		this.$('.Modal-inner')
+			.text()
+			.trim(),
+		'template block text'
+	)
 })

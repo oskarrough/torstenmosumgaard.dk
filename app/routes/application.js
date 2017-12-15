@@ -11,7 +11,9 @@ export default Ember.Route.extend({
 	model() {
 		const url = `https://keramik.now.sh`
 		const store = get(this, 'store')
-		return get(this, 'ajax').request(url).then(res => store.serialize(res))
+		return get(this, 'ajax')
+			.request(url)
+			.then(res => store.serialize(res))
 	},
 
 	afterModel(model) {

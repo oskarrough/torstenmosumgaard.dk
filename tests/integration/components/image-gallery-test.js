@@ -17,7 +17,9 @@ test('it renders', function(assert) {
   `
 	)
 
-	var allItems = this.$('i').text().trim()
+	var allItems = this.$('i')
+		.text()
+		.trim()
 	// there is a very low chance this this might fail
 	assert.notEqual(allItems, '12345678910')
 })
