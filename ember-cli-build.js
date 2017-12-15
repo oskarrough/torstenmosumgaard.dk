@@ -1,8 +1,11 @@
 /* eslint-env node */
+'use strict';
+
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
-  var app = new EmberApp(defaults, {
+  let app = new EmberApp(defaults, {
+    // Add options here
 		// Don't pollute our index.html with meta data.
 		storeConfigInMeta: false,
 

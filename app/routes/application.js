@@ -1,4 +1,6 @@
 import Ember from 'ember'
+import 'npm:lazysizes'
+import 'npm:lazysizes/plugins/attrchange/ls.attrchange'
 
 const {get, set, inject} = Ember
 
