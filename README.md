@@ -1,8 +1,10 @@
 # Torsten Mosumgaard Gallery
 
-This is an Ember.js application that renders a gallery from a Cloudinary.com instance. It is connected with a simple node API to extract the images: https://gitlab.com/oskarrough/torstenmosumgaard-api.
+This is the website on https://torstenmosumgaard.dk.
 
-You can format all scripts using `yarn format`. It's a good idea to run this before committing.
+It's one big gallery made with Ember.js. All images are fetched live from a Cloudinary account using https://github.com/oskarrough/cloudinary-endpoint
+
+You can format all scripts using `yarn prettier`. It's a good idea to run this before committing.
 
 ## Prerequisites
 
