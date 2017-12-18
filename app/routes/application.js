@@ -1,18 +1,18 @@
 import Ember from 'ember'
 import 'npm:lazysizes'
 import 'npm:lazysizes/plugins/attrchange/ls.attrchange'
+import fetch from 'fetch'
 
 const {get, set, inject} = Ember
 
 export default Ember.Route.extend({
-	ajax: inject.service(),
 	store: inject.service(),
 
 	model() {
 		const url = `https://keramik.now.sh`
 		const store = get(this, 'store')
-		return get(this, 'ajax')
-			.request(url)
+		return fetch(url)
+			.then(res => res.json())
 			.then(res => store.serialize(res))
 	},
 
