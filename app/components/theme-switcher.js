@@ -1,4 +1,4 @@
-import Component from '@ember/component';
+import Component from '@ember/component'
 
 export default Component.extend({
 	tagName: 'button',
@@ -6,4 +6,4 @@ export default Component.extend({
 	click() {
 		document.body.classList.toggle('theme-dark')
 	}
-});
+})

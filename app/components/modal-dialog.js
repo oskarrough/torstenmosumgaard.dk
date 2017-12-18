@@ -6,8 +6,8 @@ function trapFocus(event) {
 	const dialogOpen = main.getAttribute('aria-hidden') === 'true'
 
 	if (dialogOpen && !modal.contains(event.target)) {
-		event.stopPropagation();
-		modal.focus();
+		event.stopPropagation()
+		modal.focus()
 	}
 }
 
@@ -25,20 +25,20 @@ export default Ember.Component.extend({
 
 		// Hide main content AFTER moving focus
 		const main = document.querySelector('main')
-		main.setAttribute("aria-hidden", "true");
+		main.setAttribute('aria-hidden', 'true')
 
 		// Trap focus
-		document.addEventListener("focus", trapFocus, true)
+		document.addEventListener('focus', trapFocus, true)
 	},
 
 	willDestroyElement() {
 		// Restore focus
 		const main = document.querySelector('main')
-		main.setAttribute("aria-hidden", "false");
-		this.get('lastFocus').focus();
+		main.setAttribute('aria-hidden', 'false')
+		this.get('lastFocus').focus()
 
 		// Remove events
-		document.removeEventListener("focus", trapFocus, true)
+		document.removeEventListener('focus', trapFocus, true)
 	},
 
 	actions: {
