@@ -65,3 +65,21 @@ img.lazyloaded {
   transition: opacity 200ms 100ms;
 }
 
+body {
+	transition: background-color 200ms, color 200ms;
+}
+
+.theme-dark {
+  background-color: hsl(0, 0%, 5%);
+  color: hsl(0, 0%, 95%);
+	-webkit-font-smoothing: antialiased;
+
+	address a {
+		color: hsl(230, 80%, 80%);
+	}
+
+	figure .Ratio {
+		background-color: hsl(0, 0%, 20%);
+	}
+}
+

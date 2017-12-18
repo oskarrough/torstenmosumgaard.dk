@@ -1,51 +1,51 @@
 /* Wrap <p> tags in this */
 .TextColumns {
-  display: flex;
-  flex-flow: row wrap;
+	display: flex;
+	flex-flow: row wrap;
 }
 
 .TextColumns > * {
-  box-sizing: border-box;
-  flex-basis: 100%;
+	box-sizing: border-box;
+	flex-basis: 100%;
 
-  @media (min-width: 568px) {
-    flex-basis: 33%;
-    flex-basis: calc(100% / 6 * 2);
-    padding-right: 2rem;
-  }
+	@media (min-width: 568px) {
+		flex-basis: 33%;
+		flex-basis: calc(100% / 6 * 2);
+		padding-right: 2rem;
+	}
 }
 
 /* Sections are used as grid wrappers */
 section {
-  display: flex;
-  flex-flow: row wrap;
+	display: flex;
+	flex-flow: row wrap;
 }
 
 section > * {
-  display: flex;
-  flex-flow: column nowrap;
-  flex-basis: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	flex-basis: 100%;
 }
 
 @media (min-width: 568px) {
-  body {
-    margin-left: 4%;
-    margin-right: 4%;
-  }
+	body {
+		margin-left: 4%;
+		margin-right: 4%;
+	}
 
-  section > * {
-    flex-basis: 33%;
-  }
+	section > * {
+		flex-basis: 33%;
+	}
 
-  // Make every second row top aligned
-  // section > *:nth-child(6n-2),
-  // section > *:nth-child(6n-1),
-  // section > *:nth-child(6n) {
-  //   figure {
-  //     margin-top: 0;
-  //     margin-bottom: 2rem;
-  //   }
-  // }
+	// Make every second row top aligned
+	// section > *:nth-child(6n-2),
+	// section > *:nth-child(6n-1),
+	// section > *:nth-child(6n) {
+		//   figure {
+			//     margin-top: 0;
+			//     margin-bottom: 2rem;
+		//   }
+	// }
 }
 
 // @media (min-width: 1024px) {
@@ -58,59 +58,67 @@ section > * {
 // }
 
 @media (min-width: 1040px) {
-  section > *:nth-child(5n + 3),
-  section > * {
-    flex-basis: 16%;
-    flex-basis: calc(100% / 6);
-    /* max-height: 3rem; */
-  }
+	section > *:nth-child(5n + 3),
+	section > * {
+		flex-basis: 16%;
+		flex-basis: calc(100% / 6);
+		/* max-height: 3rem; */
+	}
 
-  /* section > *:nth-child(9n) { */
-  /*   flex-basis: 33.333%; */
-  /*   flex-basis: calc(100% / 6 * 2); */
-  /* } */
+	/* section > *:nth-child(9n) { */
+	/*   flex-basis: 33.333%; */
+	/*   flex-basis: calc(100% / 6 * 2); */
+	/* } */
 
-  section > *:nth-child(9n) {
-    flex-basis: calc(100% / 6 * 2);
-  }
-  section > *:nth-child(28n) {
-    flex-basis: calc(100% / 6 * 4);
-  }
-  section > *:nth-child(29n) {
-    flex-basis: calc(100% / 6 * 2);
-  }
-  section > *:nth-child(36n) {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    margin-left: calc(100% / 6 * 1);
-    flex-basis: calc(100% / 6 * 4);
-    margin-right: calc(100% / 6 * 1);
-  }
+	section > *:nth-child(9n) {
+		flex-basis: calc(100% / 6 * 2);
+	}
+	section > *:nth-child(28n) {
+		flex-basis: calc(100% / 6 * 4);
+	}
+	section > *:nth-child(29n) {
+		flex-basis: calc(100% / 6 * 2);
+	}
+	section > *:nth-child(36n) {
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+		margin-left: calc(100% / 6 * 1);
+		flex-basis: calc(100% / 6 * 4);
+		margin-right: calc(100% / 6 * 1);
+	}
 }
 
 /* Modifier that turns the grid into a horizontal thumbnail style */
 .Grid--row {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 2;
-  flex-flow: row nowrap;
-  min-height: 2rem;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
+	flex-flow: row nowrap;
+	min-height: 2rem;
 }
 
 .Grid--row figure {
-  margin: auto 0 0;
+	margin: auto 0 0;
 }
 
 .Grid--row > * {
-  flex: 1;
+	flex: 1;
 }
 
 .Grid--row > a:hover {
-  flex: 160px;
+	flex: 160px;
 }
 
 /* .Grid--row > a.active { */
 /*   outline: 2px solid blue; */
 /* } */
+
+.ThemeSwitcher {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+}
+
