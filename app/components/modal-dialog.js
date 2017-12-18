@@ -8,7 +8,6 @@ function trapFocus(event) {
 	if (dialogOpen && !modal.contains(event.target)) {
 		event.stopPropagation();
 		modal.focus();
-		console.log('stop propagation, modal focus')
 	}
 }
 
