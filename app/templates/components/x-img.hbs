@@ -1,4 +1,4 @@
-<img class="lazyload" alt="" width="{{img.width}}" height="{{img.height}}" data-sizes="auto" data-srcset="{{cloudinary-url img.id 1440}} 1024w, {{cloudinary-url img.id 640}} 640w, {{cloudinary-url img.id 320}} 320w">
+<img class="lazyload" alt="{{img.id}}" width="{{img.width}}" height="{{img.height}}" data-sizes="auto" data-srcset="{{cloudinary-url img.id 1440}} 1024w, {{cloudinary-url img.id 640}} 640w, {{cloudinary-url img.id 320}} 320w">
 {{yield}}
 
 <div class="Loader">
@@ -6,5 +6,5 @@
 </div>
 
 <div>
-  <div class="Ratio" style={{inlineStyles}}></div>
+	<div class="Ratio" style={{inlineStyles}}></div>
 </div>
