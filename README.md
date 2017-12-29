@@ -10,11 +10,9 @@ This is the source code for the website on https://torstenmosumgaard.dk.
 - Decent performance
 - Modal gallery with URLs
 - Keyboard shortcuts (you can tab around or use arrow keys)
-- Made with Ember.js (one day we should make a lightweight version)
+- Made with Ember.js
 
 ## Development
-
-### Installation
 
 Make sure you have the following installed:
 
@@ -47,4 +45,8 @@ You can format all scripts using `yarn prettier`. It's a good idea to run this b
 ### Deploying
 
 The master branch is automatically deployed via netlify.com to https://torstenmosumgaard.dk.
-he master branch is automatically deployed via netlify.com to https://torstenmosumgaard.dk.
+
+## Mini version
+
+While Ember.js makes it a pleasure to develop small things like this, it is a bit too heavy. If all you want it is a gallery check the `mini-version` folder in this repo.
+
