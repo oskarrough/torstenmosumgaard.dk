@@ -10,11 +10,9 @@ This is the source code for the website on https://torstenmosumgaard.dk.
 - Decent performance
 - Modal gallery with URLs
 - Keyboard shortcuts (you can tab around or use arrow keys)
-- Made with Ember.js (one day we should make a lightweight version)
+- Made with Ember.js
 
 ## Development
-
-### Installation
 
 Make sure you have the following installed:
 
