@@ -12,9 +12,11 @@ This is the source code for the website on https://torstenmosumgaard.dk.
 - Keyboard shortcuts (you can tab around or use arrow keys)
 - Made with Ember.js (one day we should make a lightweight version)
 
-## Installation
+## Development
 
-Before installing, make sure you have the following installed:
+### Installation
+
+Make sure you have the following installed:
 
 * [Git](https://git-scm.com/)
 * [Node.js](https://nodejs.org/) (with npm or yarn)
@@ -27,7 +29,7 @@ Before installing, make sure you have the following installed:
 * `cd torstenmosumgaard-gallery`
 * `yarn`
 
-## Development
+### Local server
 
 Run `yarn start` to start a development server on [http://localhost:4200](http://localhost:4200).
 
