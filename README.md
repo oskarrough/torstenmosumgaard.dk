@@ -4,19 +4,24 @@ This is the source code for the website on https://torstenmosumgaard.dk.
 
 ![screenshot](./screenshot.png)
 
+## Highlights
+
+- Images are fetched from a Cloudinary account using https://github.com/oskarrough/cloudinary-endpoint
 - Decent performance
 - Modal gallery with URLs
 - Keyboard shortcuts (you can tab around or use arrow keys)
-- Images are fetched from a Cloudinary account using https://github.com/oskarrough/cloudinary-endpoint
+- Made with Ember.js (one day we should make a lightweight version)
 
-## Prerequisites for developing
+## Installation
+
+Before installing, make sure you have the following installed:
 
 * [Git](https://git-scm.com/)
 * [Node.js](https://nodejs.org/) (with npm or yarn)
 * [Ember CLI](https://ember-cli.com/)
 * [Google Chrome](https://google.com/chrome/) (for running the tests)
 
-## Installation
+…then do:
 
 * `git clone git@github.com:oskarrough/torstenmosumgaard-gallery.git`
 * `cd torstenmosumgaard-gallery`
@@ -24,8 +29,7 @@ This is the source code for the website on https://torstenmosumgaard.dk.
 
 ## Development
 
-* `yarn start`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+Run `yarn start` to start a development server on [http://localhost:4200](http://localhost:4200).
 
 ### Running Tests
 
