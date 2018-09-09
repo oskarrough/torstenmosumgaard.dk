@@ -1,5 +1,5 @@
-import {cloudinaryUrl} from 'tm/helpers/cloudinary-url'
-import {module, test} from 'qunit'
+import { cloudinaryUrl } from 'tm/helpers/cloudinary-url'
+import { module, test } from 'qunit'
 
 module('Unit | Helper | cloudinary url')
 

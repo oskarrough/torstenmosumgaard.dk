@@ -1,6 +1,5 @@
-import Ember from 'ember'
-
-const {Component, $} = Ember
+import Component from '@ember/component';
+import $ from 'jquery';
 
 export default Component.extend({
 	didInsertElement() {
@@ -13,13 +12,13 @@ export default Component.extend({
 		$(document).on(`keydown.${this.id}`, event => {
 			const key = event.key
 			if (key === 'ArrowLeft') {
-				this.attrs.left()
+				this.left()
 			}
 			if (key === 'ArrowRight') {
-				this.attrs.right()
+				this.right()
 			}
 			if (key === 'Escape') {
-				this.attrs.escape()
+				this.escape()
 			}
 		})
 	},

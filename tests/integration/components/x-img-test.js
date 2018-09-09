@@ -1,4 +1,4 @@
-import {moduleForComponent, test} from 'ember-qunit'
+import { moduleForComponent, test } from 'ember-qunit'
 import hbs from 'htmlbars-inline-precompile'
 
 moduleForComponent('x-img', 'Integration | Component | x img', {
@@ -18,10 +18,8 @@ test('it renders', function(assert) {
 		bytes: 109669,
 		width: 1024,
 		height: 768,
-		url:
-			'http://res.cloudinary.com/torstenmosumgaard/image/upload/v1478980184/sample.jpg',
-		secure_url:
-			'https://res.cloudinary.com/torstenmosumgaard/image/upload/v1478980184/sample.jpg'
+		url: 'http://res.cloudinary.com/torstenmosumgaard/image/upload/v1478980184/sample.jpg',
+		secure_url: 'https://res.cloudinary.com/torstenmosumgaard/image/upload/v1478980184/sample.jpg'
 	}
 	this.set('img', exampleData)
 

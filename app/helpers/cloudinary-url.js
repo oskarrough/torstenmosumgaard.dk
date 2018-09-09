@@ -1,4 +1,4 @@
-import Ember from 'ember'
+import { helper } from '@ember/component/helper';
 
 export function cloudinaryUrl([id, ...rest]) {
 	let width = 500
@@ -16,4 +16,4 @@ export function cloudinaryUrl([id, ...rest]) {
 	return [url]
 }
 
-export default Ember.Helper.helper(cloudinaryUrl)
+export default helper(cloudinaryUrl)

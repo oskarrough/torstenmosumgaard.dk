@@ -1,13 +1,9 @@
-import {moduleForComponent, test} from 'ember-qunit'
+import { moduleForComponent, test } from 'ember-qunit'
 import hbs from 'htmlbars-inline-precompile'
 
-moduleForComponent(
-	'theme-switcher',
-	'Integration | Component | theme switcher',
-	{
-		integration: true
-	}
-)
+moduleForComponent('theme-switcher', 'Integration | Component | theme switcher', {
+	integration: true
+})
 
 test('it renders', function(assert) {
 	// Set any properties with this.set('myProperty', 'value');

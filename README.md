@@ -38,6 +38,11 @@ Run `yarn start` to start a development server on [http://localhost:4200](http:/
 
 You can format all scripts using `yarn prettier`. It's a good idea to run this before committing.
 
+### Linting
+
+* `npm run lint:js`
+* `npm run lint:js -- --fix`
+
 ### Building
 
 * `yarn build` (production)
