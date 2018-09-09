@@ -1,6 +1,6 @@
-import Ember from 'ember'
-
-const {Component, computed, get} = Ember
+import { htmlSafe } from '@ember/string';
+import Component from '@ember/component';
+import { get, computed } from '@ember/object';
 
 export default Component.extend({
 	tagName: 'figure',
@@ -17,7 +17,7 @@ export default Component.extend({
 	}),
 
 	inlineStyles: computed('ratio', function() {
-		return Ember.String.htmlSafe(`padding-bottom: ${get(this, 'ratio')}%`)
+		return htmlSafe(`padding-bottom: ${get(this, 'ratio')}%`);
 	}),
 
 	click() {

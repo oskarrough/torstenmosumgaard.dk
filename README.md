@@ -1,6 +1,6 @@
 # Torsten Mosumgaard Gallery
 
-This is the source code for the website on https://torstenmosumgaard.dk.
+This is the source code for the website on https://www.torstenmosumgaard.dk.
 
 ![screenshot](./screenshot.png)
 
@@ -38,13 +38,18 @@ Run `yarn start` to start a development server on [http://localhost:4200](http:/
 
 You can format all scripts using `yarn prettier`. It's a good idea to run this before committing.
 
+### Linting
+
+* `npm run lint:js`
+* `npm run lint:js -- --fix`
+
 ### Building
 
 * `yarn build` (production)
 
 ### Deploying
 
-The master branch is automatically deployed via netlify.com to https://torstenmosumgaard.dk.
+The master branch is automatically deployed via netlify.com to https://www.torstenmosumgaard.dk.
 
 ## Mini version
 

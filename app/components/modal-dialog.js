@@ -1,4 +1,4 @@
-import Ember from 'ember'
+import Component from '@ember/component';
 
 function trapFocus(event) {
 	const modal = document.querySelector('[role="dialog"]')
@@ -11,7 +11,7 @@ function trapFocus(event) {
 	}
 }
 
-export default Ember.Component.extend({
+export default Component.extend({
 	classNames: ['Modal'],
 	classNameBindings: ['model:is-open'],
 

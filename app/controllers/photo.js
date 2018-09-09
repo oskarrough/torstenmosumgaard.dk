@@ -1,9 +1,9 @@
-import Ember from 'ember'
-
-const {Controller, computed, get, inject} = Ember
+import { inject as service } from '@ember/service';
+import Controller from '@ember/controller';
+import { get, computed } from '@ember/object';
 
 export default Controller.extend({
-	store: inject.service(),
+	store: service(),
 
 	previousPhoto: computed('model.id', function() {
 		return this.goTo(-1).id

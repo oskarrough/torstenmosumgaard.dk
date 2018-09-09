@@ -1,12 +1,12 @@
-import Ember from 'ember'
+import { inject as service } from '@ember/service';
+import Route from '@ember/routing/route';
+import { set, get } from '@ember/object';
 import 'npm:lazysizes'
 import 'npm:lazysizes/plugins/attrchange/ls.attrchange'
 import fetch from 'fetch'
 
-const {get, set, inject} = Ember
-
-export default Ember.Route.extend({
-	store: inject.service(),
+export default Route.extend({
+	store: service(),
 
 	model() {
 		const url = `https://keramik.now.sh`

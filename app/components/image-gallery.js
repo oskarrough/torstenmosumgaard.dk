@@ -1,6 +1,6 @@
-import Ember from 'ember'
-
-const {Component, computed, get, run} = Ember
+import Component from '@ember/component';
+import { get, computed } from '@ember/object';
+import { run } from '@ember/runloop';
 
 export default Component.extend({
 	tagName: 'section',
