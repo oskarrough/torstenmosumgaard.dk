@@ -1,6 +1,6 @@
 # Torsten Mosumgaard Gallery
 
-This is the source code for the website on https://torstenmosumgaard.dk.
+This is the source code for the website on https://www.torstenmosumgaard.dk.
 
 ![screenshot](./screenshot.png)
 
@@ -49,7 +49,7 @@ You can format all scripts using `yarn prettier`. It's a good idea to run this b
 
 ### Deploying
 
-The master branch is automatically deployed via netlify.com to https://torstenmosumgaard.dk.
+The master branch is automatically deployed via netlify.com to https://www.torstenmosumgaard.dk.
 
 ## Mini version
 
