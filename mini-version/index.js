@@ -28,7 +28,7 @@
 
 // Fetch images from Cloudinary and return data in a way PhotoSwipe understands.
 async function model() {
-	const response = await fetch('https://keramik.now.sh')
+	const response = await fetch('https://torstenmosumgaard-api.herokuapp.com/')
 	try {
 		const transforms = 'q_auto,f_auto,fl_awebp,c_lfill'
 		const data = await response.json()
