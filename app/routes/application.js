@@ -9,7 +9,7 @@ export default Ember.Route.extend({
 	store: inject.service(),
 
 	model() {
-		const url = `https://keramik.now.sh`
+		const url = 'https://torstenmosumgaard-api.herokuapp.com'
 		const store = get(this, 'store')
 		return fetch(url)
 			.then(res => res.json())
