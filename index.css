@@ -1,0 +1,253 @@
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--blue: hsl(230, 80%, 40%);
+}
+
+html {
+	font-family: Alegreya, serif;
+	font-size: 19px;
+	line-height: 1.4;
+	color: hsl(0, 0%, 5%);
+}
+
+body {
+	margin: 0 1rem;
+	overflow-y: scroll;
+	transition: background-color 200ms, color 200ms;
+}
+
+.Title {
+	font-size: 1.7rem;
+	font-weight: normal;
+	margin-bottom: 1rem;
+	line-height: 1.1;
+}
+
+p {
+	margin-top: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+/* Lazyloading */
+img.lazyload,
+img.lazyloading {
+	opacity: 0;
+}
+
+img.lazyloaded {
+	opacity: 1;
+	transition: opacity 200ms 100ms;
+}
+
+.SmallCaps {
+	font-style: normal;
+	font-size: 0.875rem;
+	font-family: 'Alegreya SC', 'Alegreya', serif;
+	letter-spacing: 0.01em;
+}
+
+a {
+	color: var(--blue);
+	text-decoration: none;
+}
+
+header {
+	margin: 2rem 0rem;
+}
+
+.Logo {
+	margin-right: 1rem;
+}
+
+.Subtitle {
+	font-weight: 400;
+	margin: 1rem 0 0;
+}
+
+.Title {
+	margin-top: 0;
+}
+
+header p {
+	max-width: 36rem;
+}
+
+address {
+	margin-bottom: 0.5rem;
+}
+
+address p {
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+}
+
+@media (max-width: 820px) {
+	header {
+		font-size: 0.875rem;
+	}
+}
+
+/* Wraps all images */
+figure {
+	/* background-color: hsl(0, 0%, 90%); */
+	margin: 0 0.5rem 1.5rem 0;
+	position: relative;
+	overflow: hidden;
+	user-select: none;
+	max-height: 100vh;
+	-webkit-touch-callout: none;
+}
+
+figure img {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+/* Sections are used as grid wrappers */
+section {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+section>figure {
+	display: flex;
+	flex-flow: column nowrap;
+	flex-basis: 100%;
+}
+
+@media (min-width: 568px) {
+	body {
+		margin-left: 4%;
+		margin-right: 4%;
+	}
+
+	section>figure {
+		flex-basis: 33%;
+	}
+}
+
+@media (min-width: 1040px) {
+
+	.Grid>figure:nth-child(5n + 3),
+	.Grid>figure {
+		flex-basis: 16%;
+		flex-basis: calc(100% / 6);
+	}
+
+	.Grid>figure:nth-child(9n) {
+		flex-basis: calc(100% / 6 * 2);
+	}
+
+	.Grid>figure:nth-child(28n) {
+		flex-basis: calc(100% / 6 * 4);
+	}
+
+	.Grid>figure:nth-child(29n) {
+		flex-basis: calc(100% / 6 * 2);
+	}
+
+	.Grid>figure:nth-child(36n) {
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+		margin-left: calc(100% / 6 * 1);
+		flex-basis: calc(100% / 6 * 4);
+		margin-right: calc(100% / 6 * 1);
+	}
+}
+
+/* Wrap <p> tags in this */
+.TextColumns {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.TextColumns>* {
+	flex-basis: 100%;
+}
+
+@media (min-width: 568px) {
+	.TextColumns>* {
+		flex-basis: 33%;
+		flex-basis: calc(100% / 6 * 2);
+		padding-right: 2rem;
+	}
+}
+
+.theme-dark {
+	background-color: hsl(0, 0%, 5%);
+	color: hsl(0, 0%, 95%);
+	-webkit-font-smoothing: antialiased;
+}
+
+.theme-dark address a {
+	color: hsl(230, 80%, 80%);
+}
+
+.theme-dark figure {
+	background-color: hsl(0, 0%, 20%);
+}
+
+
+
+
+/* A CSS loader/spinner */
+
+.Loader {
+	top: initial;
+	left: initial;
+	margin: 0;
+}
+
+.Loader-eye {
+	width: 20px;
+	height: 20px;
+	background-color: hsla(0, 0%, 0%, 0.1);
+	border-radius: 50%;
+	box-shadow: 30px 0px 0px 0px hsla(0, 0%, 0%, 0.1);
+	position: relative;
+}
+
+.Loader-eye::after {
+	background-color: var(--blue);
+	width: 8px;
+	height: 8px;
+	box-shadow: 30px 0px 0px 0px var(--blue);
+	border-radius: 50%;
+	left: 0;
+	top: 8px;
+	position: absolute;
+	content: "";
+	animation: eyeball 2s infinite alternate;
+}
+
+@keyframes eyeball {
+	0% {
+		transform: translateX(9px);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+#ThemeSwitcher {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	padding-top: 0.7rem;
+	padding-right: 0.7rem;
+	cursor: pointer;
+	background: none;
+	border: 0;
+}
