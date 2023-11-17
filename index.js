@@ -1,4 +1,4 @@
-import { render, html } from "https://unpkg.com/uhtml?module";
+import { render, html } from "https://cdn.jsdelivr.net/npm/uhtml/+esm";
 
 /**
  * Fetch images from Cloudinary
@@ -37,7 +37,7 @@ render(
 	html`
 		<section class="Grid">
 			${images.map(
-				(item) => html.for(item)`
+				(item) => html`
 			<figure style=${`aspect-ratio: ${item.height} / ${item.width}`}>
 			<a href=${`https://res.cloudinary.com/torstenmosumgaard/image/upload/q_auto,f_auto,fl_awebp,w_1440,c_lfill/${item.id}`}
 				data-pswp-width=${item.width}
