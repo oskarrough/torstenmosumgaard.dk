@@ -12,7 +12,7 @@ This is the source code for the website on https://torstenmosumgaard.dk.
 
 ## Development
 
-Make sure you have git and node. Them do
+Make surm you have git and node, then do:
 
 * `git clone git@github.com:oskarrough/torstenmosumgaard.dk.git`
 * `cd torstenmosumgaard.dk`
@@ -20,4 +20,4 @@ Make sure you have git and node. Them do
 
 ### Deploying
 
-The `mainr` branch is automatically deployed via netlify.com to https://torstenmosumgaard.dk.
+The `main` branch is automatically deployed via netlify.com to https://torstenmosumgaard.dk.

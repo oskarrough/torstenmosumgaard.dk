@@ -1,0 +1,19 @@
+{
+  "lockfileVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "tm",
+      "dependencies": {
+        "lazysizes": "^4.0.1",
+      },
+      "devDependencies": {
+        "prettier": "^2.8.1",
+      },
+    },
+  },
+  "packages": {
+    "lazysizes": ["lazysizes@4.1.8", "", {}, "sha512-qxBMQZKdR3cwydyyBOoGVBtN2T1nyrozhnEstV2H3M6UE/mivSh7U+n7N7DtBV2L07Uw442QRwtwf0E2IntJZg=="],
+
+    "prettier": ["prettier@2.8.1", "", { "bin": "bin-prettier.js" }, "sha512-lqGoSJBQNJidqCHE80vqZJHWHRFoNYsSpP9AjFhlhi9ODCJA541svILes/+/1GM3VaL/abZi7cpFzOpdR9UPKg=="],
+  }
+}

@@ -10,7 +10,7 @@ async function model() {
 		const response = await fetch("./images.json");
 		const transforms = "q_auto,f_auto,fl_awebp,c_lfill";
 		const data = await response.json();
-		return data.images.map((item) => {
+		return data.resources.map((item) => {
 			const id = `v${item.version}/${item.public_id}`;
 			return {
 				id,
