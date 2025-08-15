@@ -1,4 +1,5 @@
-import { render, html, htmlFor } from "https://cdn.jsdelivr.net/npm/uhtml/keyed/+esm";
+//import { render, html, htmlFor } from "https://cdn.jsdelivr.net/npm/uhtml";
+import { html, render } from 'https://esm.run/uhtml';
 
 /**
  * Fetch images from Cloudinary
@@ -37,7 +38,7 @@ render(
 	html`
 		<section class="Grid">
 			${images.map(
-				(item) => htmlFor(item)`
+				(item) => html`
 			<figure style=${`aspect-ratio: ${item.height} / ${item.width}`}>
 			<a href=${`https://res.cloudinary.com/torstenmosumgaard/image/upload/q_auto,f_auto,fl_awebp,w_1440,c_lfill/${item.id}`}
 				data-pswp-width=${item.width}
